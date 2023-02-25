@@ -13,15 +13,17 @@ public class Result {
     void check_score()
     {
         get_input();
-        if (score >= 75){
-            System.out.println("First class with distinction");
-        }
-        else if (score >=60 ){
+       String varString = score >= 75 ? "First class with distinction" : "no distinction";     //ternary operator
+       System.out.println(varString);
+
+        if (score >=60 && score < 75  ){
             System.out.println("First Class");
-        } else if (score >= 50) {
+        } else if (score >= 50 && score < 60  ) {
             System.out.println("Second class");
 
         }
+        else System.out.println("Third class ");
     }
+
 
 }
